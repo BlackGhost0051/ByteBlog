@@ -11,6 +11,12 @@
         {% endblock %}
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="{{ path('home_index') }}">Home</a></li>
+                <li><a href="{{ path('blog_index') }}">Blog</a></li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>
