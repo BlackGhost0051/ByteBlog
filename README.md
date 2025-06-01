@@ -6,9 +6,21 @@
 docker-compose up -d --build
 ```
 
-URL : `http://localhost:8080` 
-
 # Stop
 ```bash
 docker-compose down
+```
+
+# page
+
+URL : `http://localhost:8080`
+
+
+# phpmyadmin
+
+URL : `http://localhost:8081`
+
+```
+user : root
+pass : root
 ```
