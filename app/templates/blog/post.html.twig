@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="wrapper">
+        <h1>{{ post.title }}</h1>
+        <div class="post-date">{{ post.createdAt|date('Y-m-d H:i') }}</div>
+        <div class="post-content">
+            <p>{{ post.content|nl2br }}</p>
+        </div>
+
+        <a href="{{ path('blog_index') }}">← Back to blog</a>
+    </div>
+{% endblock %}

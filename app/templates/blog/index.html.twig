@@ -2,19 +2,30 @@
 
 {% block title %}Blog{% endblock %}
 
+
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="wrapper">
+        <h1>Blog Posts</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        {% if posts is empty %}
+            <p>No posts yet. <a href="{{ path('add_post_index') }}">Add a post</a>.</p>
+        {% else %}
+            {% for post in posts %}
+                <div class="post" style="margin-bottom: 20px; border-bottom: 1px solid #ccc;">
+                    <div class="post-title">
+                        <a href="{{ path('blog_post', { id: post.id }) }}">
+                            {{ post.title }}
+                        </a>
+                    </div>
+                    <div class="post-date">{{ post.createdAt|date('Y-m-d H:i') }}</div>
+                    <div class="post-content">
+                        {{ post.content|slice(0, 20)|raw }}...
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/app/src/Controller/BlogController.php</code></li>
-        <li>Your template at <code>/app/templates/blog/index.html.twig</code></li>
-    </ul>
-</div>
+        <a href="{{ path('add_post_index') }}">➕ Add new post</a>
+    </div>
 {% endblock %}
