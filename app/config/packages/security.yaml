@@ -36,4 +36,5 @@ security:
         - { path: ^/register, roles: PUBLIC_ACCESS }
         - { path: ^/login, roles: PUBLIC_ACCESS }
         - { path: ^/blog, roles: ROLE_USER }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/, roles: PUBLIC_ACCESS }

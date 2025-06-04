@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <h1>Admin Dashboard</h1>
+        <h2>All Users</h2>
+
+        <table border="1" cellspacing="0" cellpadding="8">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.isAdmin ? 'Admin' : 'User' }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">No users found.</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
