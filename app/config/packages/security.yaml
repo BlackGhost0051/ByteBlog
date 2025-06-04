@@ -20,6 +20,9 @@ security:
             form_login:
                 login_path: login_index
                 check_path: login_index
+                username_parameter: "login_form[email]"
+                password_parameter: "login_form[password]"
+#                csrf_token_generator: security.csrf.token_manager
             logout:
                 path: /logout
                 target: /
@@ -29,7 +32,8 @@ security:
 
 # CONTROL
 
-#    access_control:
-#        - { path: ^/register, roles: PUBLIC_ACCESS }
-#        - { path: ^/login, roles: PUBLIC_ACCESS }
-#        - { path: ^/, roles: ROLE_USER }
+    access_control:
+        - { path: ^/register, roles: PUBLIC_ACCESS }
+        - { path: ^/login, roles: PUBLIC_ACCESS }
+        - { path: ^/blog, roles: ROLE_USER }
+        - { path: ^/, roles: PUBLIC_ACCESS }

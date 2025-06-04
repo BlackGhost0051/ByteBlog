@@ -15,4 +15,12 @@ final class BlogController extends AbstractController
             'controller_name' => 'BlogController',
         ]);
     }
+
+    #[Route('/add_post', name: 'add_post_index')]
+    public function add_post(): Response
+    {
+        return $this->render('blog/index.html.twig', [
+            'controller_name' => 'BlogController',
+        ]);
+    }
 }

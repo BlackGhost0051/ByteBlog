@@ -2,5 +2,17 @@
 
 {% block title %}Login - ByteBlog{% endblock %}
 
+
 {% block body %}
+    <h1>Login</h1>
+
+    {% if error %}
+        <div style="color: red;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {{ form_start(form) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.password) }}
+    <button type="submit">Login</button>
+    {{ form_end(form) }}
 {% endblock %}

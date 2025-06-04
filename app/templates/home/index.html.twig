@@ -5,4 +5,17 @@
 
 {% block body %}
     <h1>Welcome to ByteBlog!</h1>
+
+    <input id="go_blog_button" type="button" value="Go to blog!">
+
+
+
+
+    <script>
+        let goBlogBTN = document.getElementById("go_blog_button");
+        goBlogBTN.addEventListener("click", () => {
+            console.log("GO");
+            location.href = "/blog";
+        });
+    </script>
 {% endblock %}
