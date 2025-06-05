@@ -3,9 +3,19 @@
 {% block title %}Register - ByteBlog{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
-    {{ form_start(registrationForm) }}
-    {{ form_widget(registrationForm) }}
-    <button type="submit">Register</button>
-    {{ form_end(registrationForm) }}
+    <div class="form-container">
+        {{ form_start(registrationForm) }}
+        <h1>Register</h1>
+
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword.first) }}
+        {{ form_row(registrationForm.plainPassword.second) }}
+        <button type="submit">Register</button>
+        {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

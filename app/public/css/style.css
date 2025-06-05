@@ -1,11 +1,96 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+
+}
+
+form[name=login_form],
+form[name=registration_form]{
+    background: #333333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 50ex;
+    color: white;
+}
+
+form[name=login_form] h1,
+form[name=registration_form] h1{
+    text-align: center;
+    color: white;
+}
+
+
+form div,
+form div{
+    margin: 2ex;
+    display: flex;
+}
+
+form div label,
+form div label{
+    width: 30%;
+}
+
+form div input,
+form div input{
+    width: 100%;
+    background-color: #d3d3d3;
+}
+form div textarea{
+    width: 100%;
+    height: 50vh;
+    background-color: #d3d3d3;
+}
+
+form[name=login_form] button[type="submit"],
+form[name=registration_form] button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #009578;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type=submit]{
+    padding: 0.8rem 1.2rem;
+    background-color: #009578;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
 }
 
 nav {
     background-color: #333;
-    padding: 1rem;
+    padding: 1.7ex;
 }
 
 nav ul {
@@ -31,5 +116,86 @@ nav ul li a:hover {
 
 h1 {
     padding: 1rem;
-    color: #333;
 }
+
+
+
+
+
+.wrapper {
+    max-width: 80vw;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+}
+
+
+.wrapper a {
+    display: inline-block;
+    color: #00ffae;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wrapper a:hover {
+    color: #00cc8f;
+    text-decoration: underline;
+}
+
+.post-title a {
+    font-size: 1.5rem;
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+    color: #0095cc;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.post-content p{
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#go_blog_button{
+    margin-left: 4ex;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #009578;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+

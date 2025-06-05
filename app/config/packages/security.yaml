@@ -22,6 +22,7 @@ security:
                 check_path: login_index
                 username_parameter: "login_form[email]"
                 password_parameter: "login_form[password]"
+                default_target_path: /blog
 #                csrf_token_generator: security.csrf.token_manager
             logout:
                 path: /logout

@@ -6,6 +6,7 @@
 
 {% block body %}
     <div class="wrapper">
+        <a href="{{ path('add_post_index') }}">Add new post</a>
         <h1>Blog Posts</h1>
 
         {% if posts is empty %}
@@ -26,6 +27,5 @@
             {% endfor %}
         {% endif %}
 
-        <a href="{{ path('add_post_index') }}">➕ Add new post</a>
     </div>
 {% endblock %}
