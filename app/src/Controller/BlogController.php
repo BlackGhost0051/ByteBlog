@@ -36,6 +36,7 @@ final class BlogController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $post->setCreatedAt(new \DateTimeImmutable());
+            $post->setAuthor($this->getUser());
 
             $em->persist($post);
             $em->flush();

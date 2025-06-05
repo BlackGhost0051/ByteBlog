@@ -19,7 +19,7 @@
                             {{ post.title }}
                         </a>
                     </div>
-                    <div class="post-date">{{ post.createdAt|date('Y-m-d H:i') }}</div>
+                    <div class="post-date">{{ post.author.email }} <br> {{ post.createdAt|date('Y-m-d H:i') }}</div>
                     <div class="post-content">
                         {{ post.content|slice(0, 20)|raw }}...
                     </div>
