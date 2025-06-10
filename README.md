@@ -15,13 +15,13 @@ A simple blog platform powered by Symfony, MySQL, Nginx, and Docker.
 ### Run the application
 
 ```bash
-docker-compose up -d --build
+  docker-compose up -d --build
 ```
 
 ### Stop the application
 
 ```bash
-docker-compose down
+  docker-compose down
 ```
 
 ## 🌐 Access the App
